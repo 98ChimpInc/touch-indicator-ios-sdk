@@ -5,6 +5,12 @@ All notable changes to the TouchIndicator iOS SDK are documented in this file.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 This project adheres to [Semantic Versioning](https://semver.org/).
 
+## [Unreleased]
+
+### Fixed
+
+- Quick taps read faint: the indicator now starts at 30% alpha and holds 0.1s after lift before fading, matching the reference implementation. (#3)
+
 ## [1.0.0] - 2026-09-03
 
 ### Added
