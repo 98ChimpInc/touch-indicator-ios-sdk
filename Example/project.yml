@@ -1,0 +1,23 @@
+name: TouchIndicatorDemo
+options:
+  bundleIdPrefix: com.98chimp
+  deploymentTarget:
+    iOS: "15.0"
+  xcodeVersion: "15.0"
+packages:
+  TouchIndicator:
+    path: ..
+targets:
+  TouchIndicatorDemo:
+    type: application
+    platform: iOS
+    sources: [TouchIndicatorDemo]
+    dependencies:
+      - package: TouchIndicator
+    settings:
+      base:
+        GENERATE_INFOPLIST_FILE: false
+        INFOPLIST_FILE: TouchIndicatorDemo/Info.plist
+        SWIFT_VERSION: "5.9"
+        CODE_SIGN_STYLE: Automatic
+        TARGETED_DEVICE_FAMILY: "1"
