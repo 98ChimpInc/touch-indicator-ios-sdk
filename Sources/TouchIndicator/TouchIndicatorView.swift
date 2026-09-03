@@ -20,7 +20,10 @@ final class TouchIndicatorView: UIView {
         layer.cornerRadius = diameter / 2
         layer.borderWidth = 2
         layer.borderColor = configuration.borderColor.cgColor
-        alpha = 0
+        // A tap lasts ~100ms, shorter than the entrance animation. Starting
+        // partly visible means the circle reads even when the finger lifts
+        // before the ramp completes.
+        alpha = 0.3
         transform = CGAffineTransform(scaleX: 0.6, y: 0.6)
     }
 
@@ -47,7 +50,10 @@ final class TouchIndicatorView: UIView {
     }
 
     func dismiss() {
-        UIView.animate(withDuration: 0.4, delay: 0, options: [.curveEaseOut, .beginFromCurrentState]) {
+        // Hold briefly after lift so a quick tap stays on screen before the
+        // fade starts; without it the exit overtakes the entrance and a
+        // ~100ms tap is barely visible.
+        UIView.animate(withDuration: 0.4, delay: 0.1, options: [.curveEaseOut, .beginFromCurrentState]) {
             self.alpha = 0
             self.transform = CGAffineTransform(scaleX: 1.3, y: 1.3)
         } completion: { _ in
