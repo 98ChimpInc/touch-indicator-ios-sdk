@@ -1,5 +1,9 @@
 # TouchIndicator iOS SDK
 
+[![Swift](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2F98ChimpInc%2Ftouch-indicator-ios-sdk%2Fbadge%3Ftype%3Dswift-versions)](https://swiftpackageindex.com/98ChimpInc/touch-indicator-ios-sdk)
+[![Platforms](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2F98ChimpInc%2Ftouch-indicator-ios-sdk%2Fbadge%3Ftype%3Dplatforms)](https://swiftpackageindex.com/98ChimpInc/touch-indicator-ios-sdk)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+
 Zero-dependency Swift package that draws a circle under every finger, so any app can show touch locations in demo videos and screen recordings without re-implementing it.
 
 - Circle follows drags and fades on lift; one circle per finger, so pinches and multi-touch read correctly.
@@ -110,3 +114,7 @@ xcodebuild test -scheme TouchIndicator -destination 'platform=iOS Simulator,name
 ## Releasing
 
 SemVer tags via the `/release-sdk` skill. Consumers pin with `from:`.
+
+## Licence
+
+MIT. See [LICENSE](LICENSE).
